@@ -42,22 +42,34 @@ body#four-six-five {
         align-self: center;
         text-align: center;
         color: var(--background);
-        animation: emboss 5s alternate;
-        animation-iteration-count: infinite;
-        animation-delay: 1s;
-    }
+        animation: emboss 10s;
 
-    @keyframes emboss {
-      from {
-        text-shadow:
-            0px 0px 0px var(--text-shadow-1),
-            0px 0px 0px var(--text-shadow-2);
-      }
-      to {
         text-shadow:
             -3px -3px 3px var(--text-shadow-1),
             3px 3px 3px var(--text-shadow-2);
-      }
+    }
+
+    @keyframes emboss {
+        0% {
+            text-shadow:
+                0px 0px 0px var(--text-shadow-1),
+                0px 0px 0px var(--text-shadow-2);
+        }
+        10% {
+            text-shadow:
+                0px 0px 0px var(--text-shadow-1),
+                0px 0px 0px var(--text-shadow-2);
+        }
+        90% {
+            text-shadow:
+                -3px -3px 3px var(--text-shadow-1),
+                3px 3px 3px var(--text-shadow-2);
+        }
+        100% {
+            text-shadow:
+                -3px -3px 3px var(--text-shadow-1),
+                3px 3px 3px var(--text-shadow-2);
+        }
     }
 
 
