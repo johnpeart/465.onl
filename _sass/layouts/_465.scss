@@ -1,0 +1,64 @@
+body#four-six-five {
+
+
+    // <h1 class="display">
+    $extralarge: (
+        "font-size": (
+            "mobile": 200px,
+            "tablet": 400px,
+            "desktop": 600px
+        ),
+        "line-height": (
+            "mobile": 200px,
+            "tablet": 400px,
+            "desktop": 600px
+        )
+    );
+
+    --text-shadow-1: var(--gray-300);
+    --text-shadow-2: var(--absolute-white);
+
+    @include darkMode {
+        --text-shadow-1: var(--absolute-black);
+        --text-shadow-2: var(--gray-900);
+    }
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .container.full-height {
+        height: 100vh;
+
+        display: flex;
+    }
+
+    h1 {
+        position: relative;
+        display: block;
+        @include typography($extralarge);
+        padding: 0;
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        color: var(--background);
+        animation: emboss 5s alternate;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes emboss {
+      from {
+        text-shadow:
+            0px 0px 0px var(--text-shadow-1),
+            0px 0px 0px var(--text-shadow-2);
+      }
+      to {
+        text-shadow:
+            -3px -3px 3px var(--text-shadow-1),
+            3px 3px 3px var(--text-shadow-2);
+      }
+    }
+
+
+}

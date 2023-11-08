@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body id="{{ page.layout | slugify }}" class="{% for category in page.categories %}theme-{{ category | downcase }} {% endfor %}{% if jekyll.environment == 'development' %} debug{% endif %}">
+
+    <div class="container full-height">
+      <h1>465</h1>
+    </div>
+
+    {% include analytics.html %}
+
+  </body>
+
+</html>
+

@@ -1,7 +1,5 @@
 _site/
 .sass-cache/
-_sass/
-_layouts/
 _includes/
 .jekyll-cache/
 .jekyll-metadata
