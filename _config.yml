@@ -1,0 +1,112 @@
+# Site settings
+title: "John Peart"
+description: "Four. Six. Five. A place for things that don't belong in my other places."
+author: "John Peart"
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.465.onl"
+
+# # Header menu
+# header-menu:
+#   - link: "https://johnpe.art/writing"
+#     label: "Writing"
+#   - link: "https://johnpe.art/stream"
+#     label: "Stream"
+#   - link: "https://johnpe.art/about"
+#     label: "About me"
+#   - link: "https://johnpe.art/projects"
+#     label: "Projects"
+#   - link: "https://johnpe.art/goals"
+#     label: "Goals"
+#   - link: "https://johnpe.art/wishlist"
+#     label: "Wishlist"
+
+# Assets
+image-path: "/assets/images"
+css-path: "/assets/styles"
+js-path: "/assets/scripts"
+social-media-image: "/assets/images/site/social-media.png"
+favicon: "/favicon.ico"
+favicon-svg: "/assets/images/site/favicon.svg"
+favicon-pinned-svg: "/assets/images/site/favicon-pinned-svg.svg"
+favicon-large-png: "/assets/images/site/favicon-large-png.png"
+theme-colour: "#009fe3"
+
+# <link rel="me" ...>
+# Twitter
+twitter-url: "https://twitter.com/johnpeart" # Twitter handle i.e. joebloggs
+twitter-handle: "johnpeart" # Twitter handle i.e. joebloggs
+
+# Webmention.io
+webmention-io:
+  email: hello@465.onl
+
+# Mastodon
+mastodon-url: "https://mastodon.social/@johnpeart"
+mastodon-handle: "johnpeart@mastodon.social"
+mastodon:
+  username: johnpeart
+  instance: mastodon.social
+
+## LinkedIn
+linkedin-url: "https://linkedin.com/in/jrpeart"
+linkedin-handle: "jrpeart"
+
+# Github
+github-url:  "https://github.com/johnpeart"
+github-handle:  "johnpeart"
+
+# Editor
+github:
+  username: "johnpeart"
+  repo: "465.onl"
+  branch: "main"
+
+# WebMentions
+webmentions:
+  # pause_lookups: true
+  username: www.465.onl
+  cache_folder: _data
+  cache_bad_uris_for: 5
+  collections: true
+  js: false
+  syndication:
+    mastodon:
+      endpoint: https://brid.gy/publish/mastodon
+      response_mapping:
+        syndication: $.url
+        username: $.user.screen_name
+
+# Jekyll build settings
+remote_theme: johnpeart/theme
+permalink: pretty
+markdown: kramdown
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+future: false
+highlighter: true
+sass:
+  sass_dir: _sass
+
+# Include these files/folders that are excluded by default
+include:
+- "/.well-known"
+
+plugins:
+- jekyll-remote-theme
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-redirect-from
+- jekyll-epoch-time
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
